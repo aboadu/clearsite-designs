@@ -45,3 +45,34 @@ document.querySelectorAll('.card, .step, .portfolio-card, .about-content, .conta
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
 });
+
+// Handle form submission via fetch (fixes mobile browsers)
+const form = document.getElementById('contact-form');
+if (form) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(function(response) {
+            if (response.ok) {
+                window.location.href = '/thank-you';
+            } else {
+                btn.textContent = 'Send Message';
+                btn.disabled = false;
+                alert('Something went wrong. Please try again or email boadu.august@gmail.com directly.');
+            }
+        })
+        .catch(function() {
+            btn.textContent = 'Send Message';
+            btn.disabled = false;
+            alert('Something went wrong. Please try again or email boadu.august@gmail.com directly.');
+        });
+    });
+}
