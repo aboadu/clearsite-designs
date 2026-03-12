@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Sent | ClearSite Designs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #FAF7F2;
+            --color-text: #2C2416;
+            --color-text-light: #6B5D4D;
+            --color-accent: #8B6914;
+            --font-heading: 'DM Serif Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            color: var(--color-text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 500px;
+        }
+
+        .checkmark {
+            width: 72px;
+            height: 72px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: var(--color-text-light);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--color-accent);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.25s;
+        }
+
+        a:hover {
+            background: #A37D1A;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="checkmark">&#10003;</div>
+        <h1>Message sent!</h1>
+        <p>Thanks for reaching out. I'll get back to you within 24 hours. Looking forward to learning about your project.</p>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
