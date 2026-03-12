@@ -399,6 +399,13 @@ h3 {
    Portfolio
    =========================== */
 
+.portfolio-sub {
+    color: var(--color-text-light);
+    margin-top: 8px;
+    margin-bottom: 0;
+    max-width: 600px;
+}
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -411,23 +418,54 @@ h3 {
     overflow: hidden;
     border: 1px solid var(--color-border);
     background: var(--color-white);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(44, 36, 22, 0.1);
+}
+
+.portfolio-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.portfolio-link:hover {
+    color: inherit;
 }
 
 .portfolio-placeholder {
     height: 200px;
-    background: linear-gradient(135deg, var(--color-border) 0%, var(--color-bg-alt) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
-    color: var(--color-text-light);
-    font-size: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
 }
 
-.portfolio-card p {
-    padding: 16px 20px;
+.portfolio-info {
+    padding: 20px;
+}
+
+.portfolio-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: var(--color-text);
+}
+
+.portfolio-info p {
     font-size: 0.9rem;
     color: var(--color-text-light);
+    margin-bottom: 12px;
+}
+
+.view-demo {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-accent);
 }
 
 /* ===========================
